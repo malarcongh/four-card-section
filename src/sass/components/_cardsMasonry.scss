@@ -1,0 +1,59 @@
+@use '../abstracts/variables' as *;
+
+
+.cards-masonry{
+  max-width: 90%;
+  margin:0 auto;
+  margin-top: 5rem;
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  grid-template-areas: 
+  ". tb  ."
+  "sp tb cc"
+  "sp km cc"
+  ". km .";
+  transition: all .2s;
+
+  @media screen and (max-width: $breakpoint-l){
+    &{
+
+      grid-template-columns: 6rem minmax(0, auto) 6rem minmax(0, auto)  6rem;
+
+      grid-template-areas: 
+      "sp sp tb tb .."
+      ".. km km cc cc";
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-m){
+    &{
+
+      grid-template-columns: repeat(4, minmax(0, auto));
+
+      grid-template-areas: 
+      "sp sp tb tb"
+      "km km cc cc";
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-s){
+    &{
+
+      grid-template-columns: minmax(0, auto);
+
+      grid-template-areas: 
+      "sp"
+      "tb"
+      "km"
+      "cc";
+    }
+  }
+
+}
+
+// @media screen and (max-width: 1275px){
+//   .cards-masonry{
+
+//   }
+// }

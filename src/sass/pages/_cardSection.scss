@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+
+.cards-section{
+  padding-top: 6rem;
+  text-align: center;
+  padding-bottom: 5rem;
+
+  @media screen and (max-width: $breakpoint-s) {
+    &{
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.section-title{
+
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+
+  .title-light{
+    font-weight: 200;
+  }
+}
+
+.section-text{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
